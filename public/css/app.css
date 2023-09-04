@@ -1,0 +1,647 @@
+@charset "UTF-8";
+/* reset */
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	background-color:#f7e3cd;;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+header{
+	position: relative;
+	padding: 0.2em 0.5em;
+	background: -webkit-linear-gradient(to right, rgb(255, 124, 111), #ffc994);
+	background: linear-gradient(to right, rgb(255, 124, 111), #ffc994);
+	color: white;
+	font-weight: lighter;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
+}
+.info{
+	border: solid 2px rgb(252, 195, 121);
+	border-radius: 6px;
+	margin: 3px;
+}
+ .top{
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+} 
+.like-button{
+text-align: center;
+text-decoration: none;
+
+margin: auto;
+padding: 0.5rem 4rem;
+font-weight: bold;
+border-radius: 0.3rem;
+border-bottom: 7px solid #720256;
+background: rgb(255, 97, 202);
+color: #fff;
+}
+.like-button:hover{
+	margin-top: 6px;
+	border-bottom: 1px solid #720256;
+	color: #fff;
+}
+.logout{
+	cursor: pointer;
+	border: solid 2px rgb(252, 155, 64);
+	border-radius: 6px;
+	padding: 4px;
+	background-color: #ffc994;
+	color: whiteas;
+}
+h2{
+	font-size: 25px;
+}
+a{
+	color: black;
+}
+
+.add_text{
+	padding: 5% 0;
+	text-align: left;
+}
+.btn--orange,
+.btn--orange {
+  color: #fff;
+  background-color: #eb6200a9;
+  padding: 0.5rem 4rem ;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.btn--orange:hover,
+.btn--orange:hover {
+  color: #fff;
+  background: #eb6200a9;
+}
+.btn--aqua,
+.btn--aqua {
+  color: #fff;
+  background-color: #00a1eba9;
+  padding: 0.5rem 4rem ;
+  cursor: pointer;
+  margin:3% 0 3%;
+}
+.btn--aqua:hover,
+.btn--aqua:hover {
+  color: #fff;
+  background: #00a1eba9;
+}
+.btn--radius {
+   border-radius: 100vh;
+}
+.input_text{
+    padding: 2% 0;
+
+}
+.input_text input[type='text']{
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 70%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+.input_text input[type='password']{
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 70%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+.input_text label{
+	text-align: right;
+	padding-right: 10px; 
+
+}
+.container {
+	width: 80%;
+	margin: 10% auto;
+	padding: 20px;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	border-radius: 5vh;;
+	background: -webkit-linear-gradient(to right, rgb(255, 124, 111), #ffc994);
+	background: linear-gradient(to right, rgb(255, 124, 111), #ffc994);
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.btn_top{
+display: block;
+text-align: center;
+text-decoration: none;
+width: 50%;
+margin: auto;
+padding: 1.5rem 4rem;
+font-weight: bold;
+border-radius: 0.3rem;
+border-bottom: 7px solid #b66305;
+background: rgb(255, 110, 97);
+color: #fff;
+}
+.btn_top:hover{
+	margin-top: 6px;
+	border-bottom: 1px solid #b66305;
+	color: #fff;
+}
+.user_list{
+	display: flex;
+}
+.user{
+	width: 60%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 3% 3% 20%; 
+}
+.user_list_info{
+    background-color: #fff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.btns5{
+	margin:10% 1.5% 0 0;
+}
+.employee_top h2{
+	padding: 20px 50px;
+	font-size: 30px;
+	font: bold;
+}
+.task{
+	width: 60%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 auto; 
+}
+.task_regi{
+	width: 60%;
+	height: 35%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 auto; 
+}
+.media_edit{
+	display: flex;
+}
+.task-text {
+    width: 100%;
+    height: 80%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+.content{
+	width: 100%; 
+    text-align: center;
+}
+.sand {
+    margin: 0 auto;
+    text-align: center;
+}
+.err{
+	color: rgb(255, 0, 55);
+}
+.btns{
+	margin: 3% 20%;
+}
+.task-container {
+    display: flex;
+    align-items: center;
+}
+.task_text{
+	width: 90%;
+    background-color: #fff;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+.btn--orange-small{
+	color: #fff;
+	background-color: #eb6200a9;
+	padding: 0.2rem 2.5rem;
+    line-height: 0.8; 
+	cursor: pointer;
+}
+.task_ed{
+	width: 60%;
+	height: 40%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 auto; 
+}
+.task-ed{
+	width: 90%;
+    height: 80%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 auto;
+}
+.sutus_info{
+	display: flex;
+}
+.status_sand{
+	margin: 0 auto;
+}
+.task_content{
+	width: 90%;
+	background-color: #fff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+	margin: 0 4.5%;
+}	
+.progress{
+	width: 90%;
+    height: 7%;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+	margin: 0 4.5%;
+}
+.task_comment{
+	width: 90%;
+    height: 25%;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+	margin: 0 4.5%;
+}
+
+.status_message{
+	width: 90%;
+    height: 7%;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+	margin: 0 4.5%;
+}
+.buttons{
+	margin-right: 5%;
+	margin: 2.5% 4.5%;
+}
+.sand_status{
+	width: 70%;
+    height: 80%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 auto;
+}
+.status_h3{
+	margin: 0 4.5%;
+}
+.status_list_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 4.5%;
+}
+
+.status_list_column {
+    width: 48%;
+}
+.status_list_info{
+    background-color: #fff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.status_list_info_2{
+    background-color: #fff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+	height:95%;
+}
+.status_list_label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+.status_list_value {
+    flex: 1;
+    text-align: left;
+}
+.status_list_h3{
+	margin: 0 4.5%;
+}
+.status_list_task {
+    background-color: #fff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 4.5%;
+    padding: 10px;
+}
+.status_list_comment{
+	background-color: #fff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+	margin: 0 4.5%;
+	padding: 10px;
+}
+.status_list_good{
+	background-color: #fff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+	margin: 0 4.5%;
+	padding: 10px;
+}
+.status_list_progress{
+	background-color: #fff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+	margin: 0 4.5%;
+	padding: 10px;
+}
+.task_and_btn{
+	display: flex;
+    align-items: flex-start;
+	
+}
+.btn3{
+	margin: 10% 0;
+}
+.task_status{
+	width: 60%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 5% 0 20%
+}
+.sand_status_edit{
+	width: 70%;
+    height: 50%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 auto;
+}
+
+.btns4{
+	margin:3% 4.5%;
+}
+.progress_edit{
+	width: 90%;
+    height: 10%;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 0 0 4.5%;
+}
+.btn--orange--a,
+.btn--orange --a{
+  color: #fff;
+  background-color: #eb6200a9;
+  padding: 0.45rem 4rem ;
+  cursor: pointer;
+  border: 1px solid #333232;
+  font-size: 1rem;
+}
+.user_ed{
+	width: 70%;
+	height: 40%;
+	font-size: 1.2rem;
+	padding: 1.5% 1.5%;
+	border-radius: 8px;
+	border: 1px solid #aaa;
+	margin: 0 auto; 
+}
+.user_ed_text{
+	width: 90%;
+    height: 80%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 auto;
+}
+.btns6{
+	margin: 3% 0 0 0;
+}
+.reset_text{
+	width: 90%;
+    height: 5%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 auto;
+}
+.pass_reset{
+	width: 60%;
+    font-size: 1.2rem;
+    padding: 1.5% 1.5%;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin: 0 auto; 
+}
+.reset_btn{
+	margin: 3% 0 0 0;
+}
+@media screen and (max-width:896px){
+	.task_ed{
+		width: 60%;
+		height: 60%;
+		font-size: 1.2rem;
+		padding: 1.5% 1.5%;
+		border-radius: 8px;
+		border: 1px solid #aaa;
+		margin: 0 auto;
+	}
+	.btn--orange--a, .btn--orange --a .btn--radius{
+		color: #fff;
+		background-color: #eb6200a9;
+		padding: 0.45rem 4rem;
+		cursor: pointer;
+		border: 1px solid #858484;
+		font-size: 1rem;
+		margin:0.5rem 0;
+	}
+	.task_and_btn{
+		display: block;
+	}
+	.task_status{
+		width: 70%;
+		font-size: 0.8rem;
+		padding: 1.5% 1.5%;
+		border-radius: 8px;
+		border: 1px solid #aaa;
+		margin: 0 5% 0 20%
+	}
+	.btn3{
+		display: flex;
+		margin:10% 11%;
+	}
+}
+@media screen and (max-width:480px){
+	.buttons {
+	display: flex;
+    flex-direction: column; /* ボタンを縦に並べる設定 */
+    align-items: center; /* 横方向の中央揃え */
+    gap: 1rem;
+	}
+	.task_status {
+		width: 80%;
+		font-size: 0.5rem;
+		padding: 1% 1%;
+		border-radius: 8px;
+		border: 1px solid #aaa;
+		margin: 0 5% 0 10%;
+	}
+	.btn--orange, .btn--orange {
+		color: #fff;
+		background-color: #eb6200a9;
+		padding: 0.5rem 2.5rem;
+		cursor: pointer;
+		margin-bottom: 10px;
+	}
+	.task_ed{
+		width: 90%;
+		height: 60%;
+		font-size: 1.2rem;
+		padding: 1.5% 1.5%;
+		border-radius: 8px;
+		border: 1px solid #aaa;
+		margin: 0 auto; 
+	}
+	.status_list_info {
+		background-color: #fff;
+		font-size: 1rem;
+		border-radius: 8px;
+		border: 1px solid #aaa;
+		margin-bottom: 10px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+	}
+	.status_list_info_2 {
+		background-color: #fff;
+		font-size: 1rem;
+		border-radius: 8px;
+		border: 1px solid #aaa;
+		margin-bottom: 10px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		height: 95%;
+	}
+	.btn--aqua, .btn--aqua {
+		color: #fff;
+		background-color: #00a1eba9;
+		padding: 0.5rem 2.5rem;
+	}
+	.btn--orange-small {
+		color: #fff;
+		background-color: #eb6200a9;
+		padding: 0.2rem 1.5rem;
+		line-height: 0.8;
+		cursor: pointer;
+	}
+	.task {
+		width: 80%;
+		font-size: 1.2rem;
+		padding: 1.5% 1.5%;
+		border-radius: 8px;
+		border: 1px solid #aaa;
+		margin: 0 auto;
+	}
+	.sand_status_edit {
+		width: 90%;
+		height: 50%;
+		font-size: 1.2rem;
+		padding: 1.5% 1.5%;
+		border-radius: 8px;
+		border: 1px solid #aaa;
+		margin: 0 auto;
+	}
+	.media_edit{
+		display: flex;
+	}
+	.parsent{
+		font-size: 1.2rem;
+	}
+	.btns4{
+		display: flex;
+		flex-direction: column; /* ボタンを縦に並べる設定 */
+		align-items: center; /* 横方向の中央揃え */
+		gap: 1rem;
+	}
+	.btn--orange--a, .btn--orange --a .btn--radius{
+		color: #fff;
+		background-color: #eb6200a9;
+		padding: 0.45rem 2.5rem;
+		cursor: pointer;
+		border: 2px solid #4b4a4a;
+		font-size: 1rem;
+		margin:0.5rem 0;
+	}
+	.status_list_h3 {
+		margin: 0 4.5%;
+	font-size: 1.2rem;
+	}
+
+	}
