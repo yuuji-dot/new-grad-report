@@ -27,7 +27,7 @@
             </div>
         @enderror
     
-    <div class="task_comment" id="messageContainer"></div> <!-- メッセージ表示のためのコンテナ -->
+    <div class="task_message" id="messageContainer"></div> <!-- メッセージ表示のためのコンテナ -->
     <br>
     <div class="buttons">
         <button type="submit" class="btn btn--orange btn--radius">投稿</button>
