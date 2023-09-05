@@ -22,6 +22,7 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             $user = Auth::user();
+            \Log::info('User Authority: ' . $user->authority);
             return redirect()->route('user.toppage')->with('login_success', 'ログインが成功しました。');
         } else {
             // ログイン失敗時に直接リダイレクト

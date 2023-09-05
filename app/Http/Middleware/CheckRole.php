@@ -13,19 +13,23 @@ class CheckRole
     {
         $user = Auth::user();
         $currentRoute = $request->route()->getName();
-
-        if ($user && in_array($user->authority, $roles)) {
-            // ユーザーがログインしており、権限が要求されるものと一致する場合の処理
+    
+        if ($user && $user->authority === 0) {
+            // システム管理者向けの処理
             return $next($request);
-        } elseif (
+        } else if ($user && $user->authority === 1) {
+            // 一般ユーザー向けの処理
+            return $next($request);
+        } else if (
+            // 以降の条件分岐は変更なし
             ($request->is('/') || $currentRoute === 'top' || $currentRoute === 'reset') && !$user ||
-            $currentRoute === 'password.reset' ||  // パスワードリセット
-            $currentRoute === 'user.toppage'  // ユーザートップページ
+            $currentRoute === 'password.reset' ||
+            $currentRoute === 'user.toppage'
         ) {
             // ログインしていない場合かつ特定のルートの場合はそのまま表示
             Log::info('Middleware: No matching authority roles.');
             return $next($request);
-        } elseif (!$user) {
+        } else if (!$user) {
             // ログインしていない場合はログイン画面にリダイレクト
             return Redirect::to('/');
         } else {
@@ -34,5 +38,3 @@ class CheckRole
         }
     }
 }
-
-
