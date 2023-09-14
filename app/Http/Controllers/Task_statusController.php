@@ -70,7 +70,7 @@ class Task_statusController extends Controller
     }
     //編集内容の更新
     public function exeStatus_update(Task_statusRequest $request){
-        if ($request->isMethod('POST')) {
+
         $inputs = $request->all();
         \DB::beginTransaction();
         try{
@@ -88,8 +88,7 @@ class Task_statusController extends Controller
         }
 
         return redirect()->route('status_list');
-    }
-        return redirect()->route('status_list');
+    
     }
     public function increaseLikeCount($id): JsonResponse
     {

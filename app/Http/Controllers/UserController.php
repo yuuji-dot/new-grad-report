@@ -22,7 +22,6 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             $user = Auth::user();
-            \Log::info('User Authority: ' . $user->authority);
             return redirect()->route('user.toppage')->with('login_success', 'ログインが成功しました。');
         } else {
             // ログイン失敗時に直接リダイレクト
@@ -98,7 +97,7 @@ class UserController extends Controller
     }
     //社員情報の編集
     public function exeUpdate_user(Request $request) {
-        if ($request->isMethod('POST')) {
+        
         $request->validate([
             'number' => 'required|exists:users,number|max:20',
             'name' => 'required|max:50',
@@ -126,12 +125,11 @@ class UserController extends Controller
             abort(500);
         }
         return redirect()->route('list_user');
-    }
-        return redirect()->route('list_user');
+    
     }
     //社員情報を削除
     public function exeUser_delete($id){
-        if ($request->isMethod('POST')) {
+        
         try{
             $user = Member::find($id);
             if($user){
@@ -142,8 +140,7 @@ class UserController extends Controller
             abort(500);
         }
         return redirect()->route('list_user'); 
-    }
-        return redirect()->route('list_user'); 
+
     }
     //ログアウト
     public function logout()

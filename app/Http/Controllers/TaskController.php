@@ -16,7 +16,6 @@ class TaskController extends Controller
     }
     //タスク登録の実行
     public function exeTask(TaskRequest $request){
-        if ($request->isMethod('POST')) {
         $user = Auth::user();
         $user_id = $user->id;
         $tasks = $request->input('tasks'); 
@@ -38,8 +37,7 @@ class TaskController extends Controller
             }
     
             return redirect()->route('task_register');
-        }
-        return redirect()->route('login');
+
     }
     //タスク一覧画面の表示
     public function showTask_list(){
